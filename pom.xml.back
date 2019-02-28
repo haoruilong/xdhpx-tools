@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.xdhpx</groupId>
+		<artifactId>xdhpx-parent-springboot</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+  	<artifactId>xdhpx-tools</artifactId>
+  	<packaging>jar</packaging>
+  	<name>${project.artifactId}</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  
+		<!-- swagger -->
+	       <dependency>
+               <groupId>io.springfox</groupId>
+               <artifactId>springfox-swagger2</artifactId>
+           </dependency>
+           <dependency>
+               <groupId>io.springfox</groupId>
+               <artifactId>springfox-swagger-ui</artifactId>
+           </dependency>
+		
+			<!-- json -->
+		    <dependency>
+			      <groupId>com.alibaba</groupId>
+			      <artifactId>fastjson</artifactId>
+		    </dependency>
+	    
+	        <!-- 参数校验 -->
+	        <dependency>
+			    <groupId>javax.validation</groupId>
+			    <artifactId>validation-api</artifactId>
+			</dependency>
+		
+        
+	        <!-- 工具类依赖 -->
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+			</dependency>
+			
+	        <!-- 使用Apache commons codec类Base64进行加密解密 -->
+	        <dependency>
+			    <groupId>commons-codec</groupId>
+			    <artifactId>commons-codec</artifactId>
+			</dependency>
+			
+			<!-- httpclient -->
+			<dependency>
+			    <groupId>org.apache.httpcomponents</groupId>
+			    <artifactId>httpclient</artifactId>
+			</dependency>
+		
+			<!--首字母缩写 -->
+			<dependency>
+			    <groupId>com.belerweb</groupId>
+			    <artifactId>pinyin4j</artifactId>
+			    <version>2.5.1</version>
+			</dependency>
+		
+
+  </dependencies>
+</project>
