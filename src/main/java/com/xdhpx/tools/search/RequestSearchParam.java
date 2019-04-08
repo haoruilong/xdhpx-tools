@@ -1,11 +1,16 @@
 package com.xdhpx.tools.search;
 
+import java.io.Serializable;
+
 /**
  * @ClassName: RequestSearchParam
  * @Description: 通用查询条件封装类
  * @author 郝瑞龙
 */
-public class RequestSearchParam {
+public class RequestSearchParam implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	public static final String EQ="eq";
 	public static final String GT="gt";
 	public static final String GE="ge";

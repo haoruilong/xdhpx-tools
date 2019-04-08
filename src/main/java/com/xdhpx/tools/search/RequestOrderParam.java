@@ -8,7 +8,9 @@ import java.io.Serializable;
   * @author 郝瑞龙
  */
 public class RequestOrderParam implements Serializable{
+	
 	private static final long serialVersionUID = 1L;
+	
 	public RequestOrderParam(){}
 	public RequestOrderParam(String sort,String order){
 		this.order = order;
