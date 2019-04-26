@@ -38,9 +38,9 @@ public class HttpClientUtil {
 
         /**配置器:初期都是默认，有需要再调整**/
         RequestConfig.Builder configBuilder = RequestConfig.custom();
-        /**设置连接超时**/
+        /**设置连接超时,指建立连接的超时时间**/
         configBuilder.setConnectTimeout(MAX_TIMEOUT);
-        /**设置读取超时**/
+        /**设置读取超时,指客户端和服务进行数据交互的时间**/
         configBuilder.setSocketTimeout(MAX_TIMEOUT);
         /**设置从连接池获取连接实例的超时**/
         configBuilder.setConnectionRequestTimeout(MAX_TIMEOUT);
@@ -85,6 +85,7 @@ public class HttpClientUtil {
 
             // 创建http GET请求
             HttpGet httpGet = new HttpGet(uri);
+            httpGet.setConfig(requestConfig);
 
             // 执行请求
             response = httpclient.execute(httpGet);
