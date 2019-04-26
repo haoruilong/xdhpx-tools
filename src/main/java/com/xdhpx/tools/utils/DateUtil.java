@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
 /**
@@ -151,6 +153,43 @@ public class DateUtil {
            return 0;
         }
     }
+    
+   /**
+    * 	时长计算 key为类型,value为时长
+    * @param startTime
+    * @param endTime
+    * @return
+    */
+    public static Map<String, Long> getTimeLength(Date startTime,Date endTime){
+		/**声明返回**/
+		Map<String, Long> map = new HashMap<String, Long>();
+		/**判断是否为空**/
+		if (startTime == null || endTime == null) {
+			return map;
+		}
+		/**获取时间差**/
+		long length = endTime.getTime() - startTime.getTime();
+		
+		/**判断时差**/
+		if (length<=0) {
+			return map;
+		}
+		
+		/**计算小时**/
+		long hour = (length / (60 * 60 * 1000));
+		map.put("hour", hour);
+		
+		/**计算分钟**/
+		long min = ((length / (60 * 1000)) - hour * 60);
+		map.put("min", min);
+		
+		/**计算秒**/
+		long second = (length / 1000 - hour * 60 * 60 - min * 60);
+		map.put("second", second);
+		
+		/**返回结果**/
+		return map;
+	}
 
     
 	public static void main(String[] args) {
