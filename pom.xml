@@ -13,12 +13,12 @@
 	  	<!-- swagger版本号 -->
 		<swagger.version>2.9.2</swagger.version>
 		<!-- json -->
-		<fastjson.version>1.2.38</fastjson.version>
+		<fastjson.version>1.2.56</fastjson.version>
 		<!-- commons-lang -->
 		<commons-lang.version>2.6</commons-lang.version>
 		<commons-codec.version>1.12</commons-codec.version>
 		<!-- httpclient -->
-		<httpclient.version>4.5.7</httpclient.version>
+		<httpclient.version>4.5.8</httpclient.version>
 		<!-- validation-api -->
 		<validation-api.version>2.0.1.Final</validation-api.version>
 		
