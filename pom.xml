@@ -9,7 +9,9 @@
    <name>${project.artifactId}</name>
 
   <properties>
-	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <!--指定Maven用什么编码来读取源码及文档 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	  	<!-- swagger版本号 -->
 		<swagger.version>2.9.2</swagger.version>
 		<!-- json -->
