@@ -12,19 +12,25 @@ import java.util.Map;
 
 public class FastJsonUtil {
 
+    /**序列化配置类**/
     private static SerializeConfig config  = new SerializeConfig();
-
-    private static String dateFormat;
     static {
-        dateFormat = "yyyy-MM-dd HH:mm:ss";
-        config .put(Date.class, new SimpleDateFormatSerializer(dateFormat));
+        /**日期格式设置**/
+        config .put(Date.class, new SimpleDateFormatSerializer("yyyy-MM-dd HH:mm:ss"));
     }
 
-    private static final SerializerFeature[] features = {SerializerFeature.WriteMapNullValue, // 输出空置字段
-            SerializerFeature.WriteNullListAsEmpty, // list字段如果为null，输出为[]，而不是null
-//            SerializerFeature.WriteNullNumberAsZero, // 数值字段如果为null，输出为0，而不是null
-//            SerializerFeature.WriteNullBooleanAsFalse, // Boolean字段如果为null，输出为false，而不是null
-//            SerializerFeature.WriteNullStringAsEmpty // 字符类型字段如果为null，输出为""，而不是null
+    /** 自定义序列化特性 */
+    private static final SerializerFeature[] features = {
+            /**输出空置字段**/
+            SerializerFeature.WriteMapNullValue,
+            /**list字段如果为null，输出为[]，而不是null**/
+            SerializerFeature.WriteNullListAsEmpty,
+            /**数值字段如果为null，输出为0，而不是null**/
+            SerializerFeature.WriteNullNumberAsZero,
+            /**Boolean字段如果为null，输出为false，而不是null**/
+            SerializerFeature.WriteNullBooleanAsFalse,
+            /**字符类型字段如果为null，输出为""，而不是null**/
+            SerializerFeature.WriteNullStringAsEmpty
     };
 
     public static String toJSONString(Object object) {
@@ -37,7 +43,6 @@ public class FastJsonUtil {
     public static Object toBean(String text) {
         return JSON.parse(text);
     }
-
     public static <T> T toBean(String text, Class<T> clazz) {
         return JSON.parseObject(text, clazz);
     }
