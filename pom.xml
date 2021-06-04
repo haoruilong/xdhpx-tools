@@ -20,7 +20,7 @@
 		<commons-lang.version>2.6</commons-lang.version>
 		<commons-codec.version>1.13</commons-codec.version>
 		<!-- httpclient -->
-		<httpclient.version>4.5.8</httpclient.version>
+		<httpclient.version>4.5.13</httpclient.version>
 		<!-- validation-api -->
 		<validation-api.version>2.0.1.Final</validation-api.version>
 		
