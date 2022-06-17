@@ -15,7 +15,7 @@
 	  	<!-- swagger版本号 -->
 		<swagger.version>2.9.2</swagger.version>
 		<!-- json -->
-		<fastjson.version>1.2.56</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<!-- commons-lang -->
 		<commons-lang.version>2.6</commons-lang.version>
 		<commons-codec.version>1.13</commons-codec.version>
